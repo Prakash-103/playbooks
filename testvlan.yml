@@ -5,7 +5,7 @@
     - name: Ensure VLAN is present
       eos_vlan:
         vlan_id: 100                # Replace with your desired VLAN ID
-        name: "VLAN 100"            # Replace with your desired VLAN name
+        name: "VLAN 100"            # Rep lace with your desired VLAN name
         state: present
       register: vlan_result
  
