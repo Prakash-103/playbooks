@@ -1,0 +1,14 @@
+- name: Create VLAN on Arista Switch
+  hosts: arista_switch
+  gather_facts: no
+  tasks:
+    - name: Ensure VLAN is present
+      eos_vlan:
+        vlan_id: 100                # Replace with your desired VLAN ID
+        name: "VLAN 100"            # Replace with your desired VLAN name
+        state: present
+      register: vlan_result
+ 
+    - name: Display VLAN creation result
+      debug:
+        var: vlan_result
