@@ -1,5 +1,5 @@
 - name: Create VLAN on Arista Switch
-  hosts: arista_switch
+  hosts: switches
   gather_facts: no
   tasks:
     - name: Ensure VLAN is present
